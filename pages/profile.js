@@ -221,27 +221,47 @@ export default function Profile() {
             <Link href="/" className="flex items-center">
               <Logo size="default" />
             </Link>
-            <div className="flex items-center space-x-3">
+            {/* Usuario info - Desktop */}
+            <div className="hidden md:flex items-center space-x-3">
               <div className="flex items-center space-x-2 bg-gray-50 rounded-lg px-3 py-2">
                 <div className="w-8 h-8 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full flex items-center justify-center text-white text-sm font-medium">
                   {user.nombre.charAt(0).toUpperCase()}
                 </div>
                 <div className="text-sm">
-                  <div className="font-medium text-gray-900">Hola, {user.nombre}</div>
+                  <div className="font-medium text-gray-900">{user.nombre}</div>
                   <div className="text-xs text-gray-500 capitalize">{user.rol}</div>
                 </div>
               </div>
-              <Link href="/dashboard" className="btn-primary">
-                🚀 Mi Centro de Control
+              <Link href="/dashboard" className="btn-primary text-sm px-3">
+                🚀 Dashboard
               </Link>
               <button
                 onClick={handleLogout}
-                className="flex items-center space-x-2 px-4 py-2 text-sm text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded-lg transition-colors"
+                className="flex items-center space-x-1 px-3 py-2 text-sm text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded-lg transition-colors"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
                 </svg>
-                <span>Salir</span>
+                <span className="hidden lg:inline">Salir</span>
+              </button>
+            </div>
+
+            {/* Usuario info - Mobile */}
+            <div className="flex md:hidden items-center space-x-2">
+              <div className="w-8 h-8 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full flex items-center justify-center text-white text-sm font-medium">
+                {user.nombre.charAt(0).toUpperCase()}
+              </div>
+              <Link href="/dashboard" className="btn-primary text-xs px-2 py-1">
+                🚀 Dashboard
+              </Link>
+              <button
+                onClick={handleLogout}
+                className="p-2 text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded-lg transition-colors"
+                title="Cerrar sesión"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                </svg>
               </button>
             </div>
           </div>
