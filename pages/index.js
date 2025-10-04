@@ -67,7 +67,7 @@ export default function Home() {
                   <Link href="/login" className="text-gray-600 hover:text-gray-800 transition-colors">
                     Iniciar Sesión
                   </Link>
-                  <Link href="/register" className="btn-primary">
+                  <Link href="/register" className="text-gray-600 hover:text-gray-800 transition-colors">
                     Registrarse
                   </Link>
                 </>
