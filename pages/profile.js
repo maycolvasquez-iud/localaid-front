@@ -223,6 +223,9 @@ export default function Profile() {
             </Link>
             <div className="flex items-center space-x-4">
               <span className="text-gray-700 font-medium">Hola, {user.nombre}</span>
+              <Link href="/dashboard" className="btn-primary">
+                Dashboard
+              </Link>
               <button
                 onClick={handleLogout}
                 className="btn-outline"

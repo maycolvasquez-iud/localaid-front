@@ -36,6 +36,9 @@ export default function Home() {
               {user ? (
                 <>
                   <span className="text-gray-700 font-medium">Hola, {user.nombre}</span>
+                  <Link href="/dashboard" className="btn-primary">
+                    Dashboard
+                  </Link>
                   <Link href="/profile" className="btn-outline">
                     Perfil
                   </Link>

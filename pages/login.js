@@ -40,8 +40,8 @@ export default function Login() {
 
         console.log('Datos guardados en localStorage')
 
-        console.log('Redirigiendo a /profile')
-        window.location.href = '/profile' // Usar window.location para asegurar la redirección
+        console.log('Redirigiendo a /dashboard')
+        window.location.href = '/dashboard' // Usar window.location para asegurar la redirección
       }
     } catch (err) {
       console.error('Error en login:', err)
