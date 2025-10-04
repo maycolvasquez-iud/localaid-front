@@ -63,11 +63,11 @@ export default function Home() {
                   </button>
                 </>
               ) : (
-                <hidden>
-                  <Link href="/login" className="text-gray-600 hover:text-gray-800 transition-colors">
+                <>
+                  <Link href="/login" hidden className="text-gray-600 hover:text-gray-800 transition-colors">
                     Iniciar Sesión
                   </Link>
-                  <Link href="/register" className="text-gray-600 hover:text-gray-800 transition-colors">
+                  <Link href="/register" hidden className="text-gray-600 hover:text-gray-800 transition-colors">
                     Registrarse
                   </Link>
                 </>
