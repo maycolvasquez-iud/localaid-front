@@ -5,9 +5,8 @@
   "scripts": {
     "dev": "next dev -p 3001",
     "build": "next build",
-    "start": "next start -p 3001",
-    "lint": "next lint",
-    "export": "next build && next export"
+    "start": "next start -p $PORT",
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "^14.0.0",
@@ -23,4 +22,3 @@
     "eslint-config-next": "^14.0.0"
   }
 }
-
