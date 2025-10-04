@@ -233,7 +233,7 @@ export default function Profile() {
                 </div>
               </div>
               <Link href="/dashboard" className="btn-primary text-sm px-3">
-                🚀 Dashboard
+                🚀 Home
               </Link>
               <button
                 onClick={handleLogout}
@@ -252,7 +252,7 @@ export default function Profile() {
                 {user.nombre.charAt(0).toUpperCase()}
               </div>
               <Link href="/dashboard" className="btn-primary text-xs px-2 py-1">
-                🚀 Dashboard
+                🚀 Home
               </Link>
               <button
                 onClick={handleLogout}
