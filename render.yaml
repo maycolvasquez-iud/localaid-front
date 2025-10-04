@@ -1,0 +1,7 @@
+services:
+  - type: static
+    name: localaid-frontend
+    buildCommand: npm run build
+    staticPublishPath: ./out
+    env: node
+    nodeVersion: 18
