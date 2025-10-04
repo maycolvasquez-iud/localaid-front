@@ -195,6 +195,7 @@ export default function Profile() {
     removeFromLocalStorage('token')
     removeFromLocalStorage('user')
     router.push('/')
+    router.reload()
   }
 
   if (loading) {

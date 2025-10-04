@@ -19,6 +19,8 @@ export default function Home() {
     removeFromLocalStorage('token')
     removeFromLocalStorage('user')
     setUser(null)
+    // Forzar actualización de la página para limpiar completamente el estado
+    router.reload()
   }
 
   return (

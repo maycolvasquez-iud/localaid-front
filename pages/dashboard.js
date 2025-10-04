@@ -112,8 +112,9 @@ export default function Dashboard() {
 
   const handleLogout = () => {
     removeFromLocalStorage('token')
-    removeFromLocalStorage('user with')
+    removeFromLocalStorage('user')
     router.push('/')
+    router.reload()
   }
 
   if (loading && !user) {
