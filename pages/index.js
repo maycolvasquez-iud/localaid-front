@@ -63,7 +63,7 @@ export default function Home() {
                   </button>
                 </>
               ) : (
-                <>
+                <hidden>
                   <Link href="/login" className="text-gray-600 hover:text-gray-800 transition-colors">
                     Iniciar Sesión
                   </Link>
