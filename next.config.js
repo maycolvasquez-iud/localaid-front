@@ -1,11 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-  env: {
-    CUSTOM_KEY: process.env.CUSTOM_KEY,
+  output: 'export',
+  trailingSlash: true,
+  images: {
+    unoptimized: true
   },
+  // Configuración para producción
+  env: {
+    NEXT_PUBLIC_API_URL: 'https://localaid-backend-1.onrender.com/api'
+  }
 }
 
 module.exports = nextConfig
-
