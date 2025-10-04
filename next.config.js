@@ -1,10 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  trailingSlash: true,
-  images: {
-    unoptimized: true
-  },
   // Configuración para producción
   env: {
     NEXT_PUBLIC_API_URL: 'https://localaid-backend-1.onrender.com/api'
