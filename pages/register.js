@@ -53,8 +53,8 @@ export default function Register() {
       }
     } catch (err) {
       console.error('Error en registro:', err)
-      if (err.code === 'ECONNREFUSED' || err.message.includes('Network Error')) {
-        setError('No se puede conectar con el servidor. Verifica que el backend esté ejecutándose.')
+      if (err.code === 'ECONNREFUSED' || err.message.includes('Network Error') || err.code === 'ETIMEDOUT') {
+        setError('El servidor está iniciando. Espere unos momentos y vuelva a intentar. (Render cold start)')
       } else if (err.response?.status === 400) {
         setError(err.response?.data?.message || 'Datos inválidos. Verifica la información ingresada.')
       } else if (err.response?.status === 409) {

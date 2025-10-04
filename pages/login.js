@@ -46,8 +46,8 @@ export default function Login() {
     } catch (err) {
       console.error('Error en login:', err)
 
-      if (err.code === 'ECONNREFUSED' || err.message.includes('Network Error')) {
-        setError('No se puede conectar con el servidor. Verifica que el backend esté ejecutándose.')
+      if (err.code === 'ECONNREFUSED' || err.message.includes('Network Error') || err.code === 'ETIMEDOUT') {
+        setError('El servidor está iniciando. Espere unos momentos y vuelva a intentar. (Render cold start)')
       } else if (err.response?.status === 401) {
         setError('Email o contraseña incorrectos.')
       } else if (err.response?.status === 400) {
